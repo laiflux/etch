@@ -18,5 +18,19 @@ square.addEventListener('mouseenter', (e) => {
 
 const recastBtn = document.getElementById('recast');
 
+recastBtn.addEventListener('click', () => {
+    let newGrid = +prompt("please enter the number of squares per side for the new grid");
+
+    gridContainer.innerHTML = "";
+    let newSquare;
+    for (let i = 0; i < newGrid; i++) {
+        for (let j = 0; j < newGrid; j++) {
+            newSquare = document.createElement('div');
+            newSquare.className = "square";
+            gridContainer.appendChild(newSquare);
+        }
+    }
+})
+
 
 
